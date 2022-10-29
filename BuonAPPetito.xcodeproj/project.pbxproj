@@ -14,6 +14,11 @@
 		13E4C35F290D1A4300BECA2B /* BuonAPPetitoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C35E290D1A4300BECA2B /* BuonAPPetitoTests.swift */; };
 		13E4C369290D1A4300BECA2B /* BuonAPPetitoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C368290D1A4300BECA2B /* BuonAPPetitoUITests.swift */; };
 		13E4C36B290D1A4300BECA2B /* BuonAPPetitoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C36A290D1A4300BECA2B /* BuonAPPetitoUITestsLaunchTests.swift */; };
+		13E4C381290D1DD100BECA2B /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C380290D1DD100BECA2B /* Ingredient.swift */; };
+		13E4C383290D1DEC00BECA2B /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C382290D1DEC00BECA2B /* Mock.swift */; };
+		13E4C385290D1DFF00BECA2B /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C384290D1DFF00BECA2B /* Pizza.swift */; };
+		13E4C387290D1E0F00BECA2B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C386290D1E0F00BECA2B /* Order.swift */; };
+		13E4C388290D1E1D00BECA2B /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C382290D1DEC00BECA2B /* Mock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,10 @@
 		13E4C364290D1A4300BECA2B /* BuonAPPetitoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuonAPPetitoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E4C368290D1A4300BECA2B /* BuonAPPetitoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuonAPPetitoUITests.swift; sourceTree = "<group>"; };
 		13E4C36A290D1A4300BECA2B /* BuonAPPetitoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuonAPPetitoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13E4C380290D1DD100BECA2B /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		13E4C382290D1DEC00BECA2B /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		13E4C384290D1DFF00BECA2B /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		13E4C386290D1E0F00BECA2B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +103,7 @@
 		13E4C34C290D1A4100BECA2B /* BuonAPPetito */ = {
 			isa = PBXGroup;
 			children = (
+				13E4C377290D1D9000BECA2B /* DataSource */,
 				13E4C34D290D1A4100BECA2B /* BuonAPPetitoApp.swift */,
 				13E4C34F290D1A4100BECA2B /* ContentView.swift */,
 				13E4C351290D1A4200BECA2B /* Assets.xcassets */,
@@ -125,6 +135,17 @@
 				13E4C36A290D1A4300BECA2B /* BuonAPPetitoUITestsLaunchTests.swift */,
 			);
 			path = BuonAPPetitoUITests;
+			sourceTree = "<group>";
+		};
+		13E4C377290D1D9000BECA2B /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				13E4C380290D1DD100BECA2B /* Ingredient.swift */,
+				13E4C382290D1DEC00BECA2B /* Mock.swift */,
+				13E4C384290D1DFF00BECA2B /* Pizza.swift */,
+				13E4C386290D1E0F00BECA2B /* Order.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E4C385290D1DFF00BECA2B /* Pizza.swift in Sources */,
 				13E4C350290D1A4100BECA2B /* ContentView.swift in Sources */,
+				13E4C381290D1DD100BECA2B /* Ingredient.swift in Sources */,
+				13E4C383290D1DEC00BECA2B /* Mock.swift in Sources */,
 				13E4C34E290D1A4100BECA2B /* BuonAPPetitoApp.swift in Sources */,
+				13E4C387290D1E0F00BECA2B /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E4C35F290D1A4300BECA2B /* BuonAPPetitoTests.swift in Sources */,
+				13E4C388290D1E1D00BECA2B /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

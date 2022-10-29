@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  BuonAPPetito
-//
-//  Created by Diana Hernández on 29/10/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
