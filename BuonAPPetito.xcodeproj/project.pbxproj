@@ -19,6 +19,9 @@
 		13E4C385290D1DFF00BECA2B /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C384290D1DFF00BECA2B /* Pizza.swift */; };
 		13E4C387290D1E0F00BECA2B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C386290D1E0F00BECA2B /* Order.swift */; };
 		13E4C388290D1E1D00BECA2B /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C382290D1DEC00BECA2B /* Mock.swift */; };
+		13E4C389290D24A400BECA2B /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C380290D1DD100BECA2B /* Ingredient.swift */; };
+		13E4C38A290D24A700BECA2B /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C384290D1DFF00BECA2B /* Pizza.swift */; };
+		13E4C38B290D24AA00BECA2B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C386290D1E0F00BECA2B /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -291,8 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E4C38A290D24A700BECA2B /* Pizza.swift in Sources */,
 				13E4C35F290D1A4300BECA2B /* BuonAPPetitoTests.swift in Sources */,
+				13E4C38B290D24AA00BECA2B /* Order.swift in Sources */,
 				13E4C388290D1E1D00BECA2B /* Mock.swift in Sources */,
+				13E4C389290D24A400BECA2B /* Ingredient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

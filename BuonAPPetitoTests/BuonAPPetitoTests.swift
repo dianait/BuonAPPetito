@@ -1,36 +1,75 @@
-//
-//  BuonAPPetitoTests.swift
-//  BuonAPPetitoTests
-//
-//  Created by Diana Hernández on 29/10/22.
-//
-
 import XCTest
 @testable import BuonAPPetito
 
 final class BuonAPPetitoTests: XCTestCase {
+    var order: Order!
+    var pizzas:  [Pizza]!
+    var pizza: Pizza!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        order = Mock.order
+        order.pizzas = Mock.pizzas
+        pizza = Pizza(id: 1, name: "Hawai")
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        order = nil
+        pizzas = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testInit() throws {
+        XCTAssertEqual(order.pizzas.count, Mock.pizzas.count)
+        XCTAssertEqual(order.pizzas.count, 5)
+        XCTAssertEqual(order.pizzas, Mock.pizzas)
+        XCTAssertEqual(order.pizzas.last?.name, "Etna")
+        XCTAssertEqual(order.pizzas.first?.name, "Margarita")
+        XCTAssertEqual(order.isOffer, false)
+        XCTAssertEqual(order.totalAmount, 0.0)
+        XCTAssertEqual(order.diss, 25)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testAddNewPizza() throws {
+        order.addPizza(pizza: pizza)
+        XCTAssertEqual(order.pizzas.count, Mock.pizzas.count + 1)
+        XCTAssertEqual(order.pizzas.last?.name, pizza.name)
+    }
+
+
+    func testRemovePizzaFromList() throws {
+        order.addPizza(pizza: pizza)
+        order.removePizza(pizza: pizza)
+        XCTAssertEqual(order.pizzas.count, Mock.pizzas.count)
+        XCTAssertEqual(order.pizzas.last?.name, Mock.pizzas.last?.name)
+    }
+
+    func testAddPizza() throws {
+        order.addPizza(pizza: pizza)
+        order.addPizza(pizza: pizza)
+        let currentPizza = order.pizzas.filter({$0.name == pizza.name})
+        XCTAssertEqual(currentPizza[0].account, 2)
+    }
+
+    func testReducePizza() throws {
+        order.addPizza(pizza: pizza)
+        order.addPizza(pizza: pizza)
+        order.addPizza(pizza: pizza)
+        order.removePizza(pizza: pizza)
+
+        let currentPizza = order.pizzas.filter({$0.name == pizza.name})
+        XCTAssertEqual(currentPizza[0].account, 2)
+    }
+
+    func testgetAmount() {
+        order.getAmount()
+        XCTAssertEqual(order.totalAmount, 9.90 * 5.0)
+    }
+
+    func testgetAmountWithNewPizza() {
+        order.addPizza(pizza: pizza)
+        order.addPizza(pizza: pizza)
+        order.getAmount()
+        XCTAssertEqual(order.totalAmount, 9.90 * 7.0)
     }
 
 }
+
