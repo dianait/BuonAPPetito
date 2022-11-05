@@ -7,7 +7,35 @@
 		<key>BuonAPPetito.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>BuonAPPetitoTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>BuonAPPetitoUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>13E4C349290D1A4100BECA2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>13E4C359290D1A4300BECA2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>13E4C363290D1A4300BECA2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

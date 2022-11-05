@@ -1,10 +1,3 @@
-//
-//  BuonAPPetitoUITests.swift
-//  BuonAPPetitoUITests
-//
-//  Created by Diana Hernández on 29/10/22.
-//
-
 import XCTest
 
 final class BuonAPPetitoUITests: XCTestCase {

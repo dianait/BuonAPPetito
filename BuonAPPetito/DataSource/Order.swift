@@ -5,7 +5,7 @@ class Order {
     var totalAmount: Double = 0.0
     var isOffer: Bool = false
     var diss: Double = 25
-    var pizzas: [Pizza] = []
+    var pizzas: [Pizza] = Mock.pizzas
     let date: Date = Date.now
 
     init(id: Int) {
@@ -25,14 +25,17 @@ class Order {
         }
     }
 
-    func addPizza(pizza: Pizza) {
+    func addPizza(pizza: Pizza) -> Int {
 
         if let index = pizzas.firstIndex(of: pizza) {
             pizzas[index].account = pizzas[index].account + 1
         }
         else {
             pizzas.append(pizza)
+            
         }
+
+        return  pizzas.firstIndex(of: pizza) ?? 0
 
     }
 

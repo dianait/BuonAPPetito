@@ -1,14 +1,14 @@
 import Foundation
 
-struct Pizza: Equatable {
+struct Pizza: Equatable, Identifiable, Hashable {
     static func == (lhs: Pizza, rhs: Pizza) -> Bool {
         lhs.name == rhs.name
     }
 
     let id: Int
-    let name: String
+    var name: String
     let price: Double = 9.90
-    var ingredients: [Ingredient] = Mock.ingredients
+    var ingredients: [Ingredient] = []
     var account: Int = 1
 }
 

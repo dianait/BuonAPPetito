@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1314848429164F7300974A02 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 1314848329164F7300974A02 /* SnapshotTesting */; };
+		131484882916536400974A02 /* testHaderView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 131484872916536400974A02 /* testHaderView.1.png */; };
+		1314848F2916587B00974A02 /* testHaderView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1314848A2916587B00974A02 /* testHaderView.1.png */; };
+		131484902916587B00974A02 /* testContentView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1314848B2916587B00974A02 /* testContentView.1.png */; };
+		131484912916587B00974A02 /* testButtonView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1314848C2916587B00974A02 /* testButtonView.1.png */; };
+		131484922916587B00974A02 /* testRowView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1314848D2916587B00974A02 /* testRowView.1.png */; };
+		131484932916587B00974A02 /* testInputView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1314848E2916587B00974A02 /* testInputView.1.png */; };
+		13148495291662A000974A02 /* customPizzaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13148494291662A000974A02 /* customPizzaView.swift */; };
+		134D09DB290EF6AC00A68700 /* headerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D09DA290EF6AC00A68700 /* headerView.swift */; };
+		134D09DD290EF78B00A68700 /* rowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D09DC290EF78B00A68700 /* rowView.swift */; };
+		134D09DF290EFB6200A68700 /* buttonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D09DE290EFB6200A68700 /* buttonView.swift */; };
+		134D09E1290EFFC900A68700 /* inputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D09E0290EFFC900A68700 /* inputView.swift */; };
+		134D09E3290F099A00A68700 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D09E2290F099A00A68700 /* OrderViewModel.swift */; };
+		13663BDF29154E900069F6ED /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13663BDE29154E900069F6ED /* SnapshotTests.swift */; };
 		13E4C34E290D1A4100BECA2B /* BuonAPPetitoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C34D290D1A4100BECA2B /* BuonAPPetitoApp.swift */; };
 		13E4C350290D1A4100BECA2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C34F290D1A4100BECA2B /* ContentView.swift */; };
 		13E4C352290D1A4200BECA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E4C351290D1A4200BECA2B /* Assets.xcassets */; };
@@ -42,6 +56,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131484872916536400974A02 /* testHaderView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testHaderView.1.png; sourceTree = "<group>"; };
+		1314848A2916587B00974A02 /* testHaderView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testHaderView.1.png; sourceTree = "<group>"; };
+		1314848B2916587B00974A02 /* testContentView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testContentView.1.png; sourceTree = "<group>"; };
+		1314848C2916587B00974A02 /* testButtonView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testButtonView.1.png; sourceTree = "<group>"; };
+		1314848D2916587B00974A02 /* testRowView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testRowView.1.png; sourceTree = "<group>"; };
+		1314848E2916587B00974A02 /* testInputView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testInputView.1.png; sourceTree = "<group>"; };
+		13148494291662A000974A02 /* customPizzaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPizzaView.swift; sourceTree = "<group>"; };
+		134D09DA290EF6AC00A68700 /* headerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerView.swift; sourceTree = "<group>"; };
+		134D09DC290EF78B00A68700 /* rowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rowView.swift; sourceTree = "<group>"; };
+		134D09DE290EFB6200A68700 /* buttonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonView.swift; sourceTree = "<group>"; };
+		134D09E0290EFFC900A68700 /* inputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputView.swift; sourceTree = "<group>"; };
+		134D09E2290F099A00A68700 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		13663BDE29154E900069F6ED /* SnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTests.swift; sourceTree = "<group>"; };
 		13E4C34A290D1A4100BECA2B /* BuonAPPetito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuonAPPetito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E4C34D290D1A4100BECA2B /* BuonAPPetitoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuonAPPetitoApp.swift; sourceTree = "<group>"; };
 		13E4C34F290D1A4100BECA2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1314848429164F7300974A02 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +111,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131484852916536400974A02 /* __Snapshots__ */ = {
+			isa = PBXGroup;
+			children = (
+				131484862916536400974A02 /* SnapshotTests */,
+			);
+			name = __Snapshots__;
+			path = BuonAPPetitoTests/__Snapshots__;
+			sourceTree = SOURCE_ROOT;
+		};
+		131484862916536400974A02 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				1314848C2916587B00974A02 /* testButtonView.1.png */,
+				1314848B2916587B00974A02 /* testContentView.1.png */,
+				1314848A2916587B00974A02 /* testHaderView.1.png */,
+				1314848E2916587B00974A02 /* testInputView.1.png */,
+				1314848D2916587B00974A02 /* testRowView.1.png */,
+				131484872916536400974A02 /* testHaderView.1.png */,
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
 		13E4C341290D1A4100BECA2B = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +161,12 @@
 				13E4C34F290D1A4100BECA2B /* ContentView.swift */,
 				13E4C351290D1A4200BECA2B /* Assets.xcassets */,
 				13E4C353290D1A4200BECA2B /* Preview Content */,
+				134D09DA290EF6AC00A68700 /* headerView.swift */,
+				134D09DC290EF78B00A68700 /* rowView.swift */,
+				134D09DE290EFB6200A68700 /* buttonView.swift */,
+				134D09E0290EFFC900A68700 /* inputView.swift */,
+				134D09E2290F099A00A68700 /* OrderViewModel.swift */,
+				13148494291662A000974A02 /* customPizzaView.swift */,
 			);
 			path = BuonAPPetito;
 			sourceTree = "<group>";
@@ -126,7 +182,9 @@
 		13E4C35D290D1A4300BECA2B /* BuonAPPetitoTests */ = {
 			isa = PBXGroup;
 			children = (
+				131484852916536400974A02 /* __Snapshots__ */,
 				13E4C35E290D1A4300BECA2B /* BuonAPPetitoTests.swift */,
+				13663BDE29154E900069F6ED /* SnapshotTests.swift */,
 			);
 			path = BuonAPPetitoTests;
 			sourceTree = "<group>";
@@ -167,6 +225,8 @@
 			dependencies = (
 			);
 			name = BuonAPPetito;
+			packageProductDependencies = (
+			);
 			productName = BuonAPPetito;
 			productReference = 13E4C34A290D1A4100BECA2B /* BuonAPPetito.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +245,9 @@
 				13E4C35C290D1A4300BECA2B /* PBXTargetDependency */,
 			);
 			name = BuonAPPetitoTests;
+			packageProductDependencies = (
+				1314848329164F7300974A02 /* SnapshotTesting */,
+			);
 			productName = BuonAPPetitoTests;
 			productReference = 13E4C35A290D1A4300BECA2B /* BuonAPPetitoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -239,6 +302,9 @@
 				Base,
 			);
 			mainGroup = 13E4C341290D1A4100BECA2B;
+			packageReferences = (
+				1314848229164F7300974A02 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 13E4C34B290D1A4100BECA2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,6 +330,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131484922916587B00974A02 /* testRowView.1.png in Resources */,
+				1314848F2916587B00974A02 /* testHaderView.1.png in Resources */,
+				131484912916587B00974A02 /* testButtonView.1.png in Resources */,
+				131484882916536400974A02 /* testHaderView.1.png in Resources */,
+				131484932916587B00974A02 /* testInputView.1.png in Resources */,
+				131484902916587B00974A02 /* testContentView.1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +354,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E4C385290D1DFF00BECA2B /* Pizza.swift in Sources */,
+				134D09E3290F099A00A68700 /* OrderViewModel.swift in Sources */,
 				13E4C350290D1A4100BECA2B /* ContentView.swift in Sources */,
 				13E4C381290D1DD100BECA2B /* Ingredient.swift in Sources */,
+				134D09DF290EFB6200A68700 /* buttonView.swift in Sources */,
+				134D09DD290EF78B00A68700 /* rowView.swift in Sources */,
+				134D09E1290EFFC900A68700 /* inputView.swift in Sources */,
+				134D09DB290EF6AC00A68700 /* headerView.swift in Sources */,
+				13148495291662A000974A02 /* customPizzaView.swift in Sources */,
 				13E4C383290D1DEC00BECA2B /* Mock.swift in Sources */,
 				13E4C34E290D1A4100BECA2B /* BuonAPPetitoApp.swift in Sources */,
 				13E4C387290D1E0F00BECA2B /* Order.swift in Sources */,
@@ -295,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E4C38A290D24A700BECA2B /* Pizza.swift in Sources */,
+				13663BDF29154E900069F6ED /* SnapshotTests.swift in Sources */,
 				13E4C35F290D1A4300BECA2B /* BuonAPPetitoTests.swift in Sources */,
 				13E4C38B290D24AA00BECA2B /* Order.swift in Sources */,
 				13E4C388290D1E1D00BECA2B /* Mock.swift in Sources */,
@@ -609,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1314848229164F7300974A02 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1314848329164F7300974A02 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1314848229164F7300974A02 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 13E4C342290D1A4100BECA2B /* Project object */;
 }
