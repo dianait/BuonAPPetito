@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ingredientView: View {
-    @State var isAdded: Bool = false
+    @State var isAdded: Bool = true
     var viewModel: OrderViewModel
     var ing: Ingredient
 
@@ -16,13 +16,9 @@ struct ingredientView: View {
             .onTapGesture {
                 isAdded = !isAdded
                 viewModel.toggleIngredient(ing: ing)
-                print("You tapped \(ing.name)")
-                print(viewModel.newPizza.ingredients.count)
-
             }
         Divider()
-    }
-
+        }
     }
 }
 

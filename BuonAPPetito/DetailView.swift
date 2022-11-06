@@ -7,9 +7,10 @@ struct DetailView: View {
     var body: some View {
         VStack {
 
-            Text("Pizza's name: \(pizza.name)")
+            Text("🍕\(pizza.name)")
+            Text("💵 \(pizza.price, specifier: "%.2f") €").bold() .font(.system(size: 20))
             Text("🥒 Ingredients").font(.system(size: 20))
-            customPizzaView()
+            customPizzaView(pizza: pizza)
         }
     }
 }
