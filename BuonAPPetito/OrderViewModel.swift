@@ -4,24 +4,30 @@ class OrderViewModel: ObservableObject {
 
     let order: Order = Mock.order
     var ingredients = Mock.ingredients
-    @Published var newIngredientes: [Ingredient] = []
-    var newPizza: Pizza = Pizza(id: 9, name: "")
-    @Published var customNamePizza: String = ""
+    var newIngredientes: [Ingredient] = []
+    @Published var newPizza: Pizza = Pizza(id: 9, name: "")
+    var customNamePizza: String = "Piccard"
 
-
-    func add(pizza: Pizza) {
-        _ = order.addPizza(pizza: pizza)
+    func add(pizza: Pizza) -> Int {
+        order.addPizza(pizza: pizza)
     }
 
-    func remove(pizza: Pizza) {
+    func remove(pizza: Pizza) -> Int {
         order.removePizza(pizza: pizza)
     }
 
     func toggleIngredient(ing: Ingredient) {
+        var ing2 = ing
+        ing2.isAdded = !ing2.isAdded
         if (newIngredientes.count == 0) {
             newPizza.name = customNamePizza
-            
+            newIngredientes.append(ing2)
         }
+        else {
+            newIngredientes.removeLast()
+        }
+
+        newPizza.ingredients = newIngredientes
 
 }
 

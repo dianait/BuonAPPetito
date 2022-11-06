@@ -2,6 +2,7 @@ import SwiftUI
 
 struct rowView: View {
     var pizza: Pizza
+    @State var counter: Int = 0
     var viewModel: OrderViewModel
 
     var body: some View {
@@ -17,13 +18,19 @@ struct rowView: View {
 
                 Image(systemName: "plus.circle.fill") .foregroundColor(.green).font(.system(size: 24))
                     .onTapGesture {
-                        viewModel.add(pizza: pizza)
+                        _ = viewModel.add(pizza: pizza)
+                        self.counter += 1
+
                     }
-                Text("\(pizza.account)")
-                Image(systemName:"minus.circle.fill" ) .foregroundColor(pizza.account < 1 ? .gray : .red).font(.system(size: 24))
+                Text("\(counter)")
+                Image(systemName:"minus.circle.fill" ) .foregroundColor(counter < 1 ? .gray : .red).font(.system(size: 24))
                     .onTapGesture {
-                        viewModel.remove(pizza: pizza)
-                        print("klajdfklasjfklsdf")
+                        if (counter > 0) {
+                            self.counter -= 1
+                            _ = viewModel.remove(pizza: pizza)
+                        }
+
+
                     }
             }.foregroundColor(.black)
             Divider()

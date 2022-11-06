@@ -19,34 +19,42 @@ final class SnapshotTests: XCTestCase {
     }
 
     func testHaderView() {
-        let headerView = headerView()
-        let view: UIView = UIHostingController(rootView: headerView).view
+        let view: UIView = headerView().toView()
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
     }
 
     func testRowView() {
-        let headerView = rowView(pizza: pizza, viewModel: OrderViewModel())
-        let view: UIView = UIHostingController(rootView: headerView).view
+        let view = rowView(pizza: pizza, viewModel: OrderViewModel()).toView()
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
     }
 
     func testButtonView() {
-        let headerView = buttonView(text: "👩‍🍳 Create your own pizza!")
-        let view: UIView = UIHostingController(rootView: headerView).view
+        let view: UIView =  buttonView(text: "👩‍🍳 Create your own pizza!").toView()
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
     }
 
     func testInputView() {
-        let headerView = inputView(text: .constant("Hola que tal"))
-        let view: UIView = UIHostingController(rootView: headerView).view
+        let view = inputView(text: .constant("Hola que tal")).toView()
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
     }
 
     func testContentView() {
-        let headerView = ContentView()
-        let view: UIView = UIHostingController(rootView: headerView).view
-        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
+        let view = ContentView().toVC()
+        assertSnapshot(matching: view, as: .image(on: .iPhone12))
     }
-
 }
 
+extension SwiftUI.View {
+    func toView() -> UIView {
+        let vc = UIHostingController(rootView: self)
+        return vc.view
+    }
+}
+
+extension SwiftUI.View {
+    func toVC() -> UIViewController {
+        let vc = UIHostingController(rootView: self)
+        vc.view.frame = UIScreen.main.bounds
+        return vc
+    }
+}

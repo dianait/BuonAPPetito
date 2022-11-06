@@ -28,26 +28,47 @@ class Order {
     func addPizza(pizza: Pizza) -> Int {
 
         if let index = pizzas.firstIndex(of: pizza) {
-            pizzas[index].account = pizzas[index].account + 1
-        }
-        else {
-            pizzas.append(pizza)
+            pizzas[index].account += 1
+            print("ADD AN UNIT")
+            print("🍕 \(pizzas)")
+            print("🍕 \(pizzas.count)")
+            return pizzas[index].account
             
+
         }
 
-        return  pizzas.firstIndex(of: pizza) ?? 0
+            pizzas.append(pizza)
+            print("ADD TO THE LIST")
+            print("🍕 \(pizzas)")
+            print("🍕 \(pizzas.count)")
+            return 1
+
+
 
     }
 
-    func removePizza(pizza: Pizza) {
+    func removePizza(pizza: Pizza) -> Int{
 
         if let index = pizzas.firstIndex(of: pizza) {
             if (pizzas[index].account < 2) {
                 pizzas.remove(at: index)
+                print("REMOVE FROM THE LIST")
+                print("🍕 \(pizzas)")
+                print("🍕 \(pizzas.count)")
+                return pizzas[index].account
             }
             else {
-                pizzas[index].account = pizzas[index].account - 1
+                pizzas[index].account -= 1
+                print("REMOVE AN UNIT")
+                print("🍕 \(pizzas)")
+                print("🍕 \(pizzas.count)")
+                return pizzas[index].account
             }
         }
+        else {
+            print("🚨 ERROR: The pizza is not in the user list")
+            return 0
+        }
+
     }
 }
