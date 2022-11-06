@@ -22,6 +22,8 @@
 		134D09DF290EFB6200A68700 /* buttonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D09DE290EFB6200A68700 /* buttonView.swift */; };
 		134D09E1290EFFC900A68700 /* inputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D09E0290EFFC900A68700 /* inputView.swift */; };
 		134D09E3290F099A00A68700 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D09E2290F099A00A68700 /* OrderViewModel.swift */; };
+		134D929029180376001C2CC8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D928F29180376001C2CC8 /* DetailView.swift */; };
+		134D92922918048F001C2CC8 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134D92912918048F001C2CC8 /* CartView.swift */; };
 		13663BDF29154E900069F6ED /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13663BDE29154E900069F6ED /* SnapshotTests.swift */; };
 		13E4C34E290D1A4100BECA2B /* BuonAPPetitoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C34D290D1A4100BECA2B /* BuonAPPetitoApp.swift */; };
 		13E4C350290D1A4100BECA2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4C34F290D1A4100BECA2B /* ContentView.swift */; };
@@ -72,6 +74,8 @@
 		134D09DE290EFB6200A68700 /* buttonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonView.swift; sourceTree = "<group>"; };
 		134D09E0290EFFC900A68700 /* inputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputView.swift; sourceTree = "<group>"; };
 		134D09E2290F099A00A68700 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		134D928F29180376001C2CC8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		134D92912918048F001C2CC8 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		13663BDE29154E900069F6ED /* SnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTests.swift; sourceTree = "<group>"; };
 		13E4C34A290D1A4100BECA2B /* BuonAPPetito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuonAPPetito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E4C34D290D1A4100BECA2B /* BuonAPPetitoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuonAPPetitoApp.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				134D09E2290F099A00A68700 /* OrderViewModel.swift */,
 				13148494291662A000974A02 /* customPizzaView.swift */,
 				130F68A22917CAF100038FAA /* ingredientView.swift */,
+				134D928F29180376001C2CC8 /* DetailView.swift */,
+				134D92912918048F001C2CC8 /* CartView.swift */,
 			);
 			path = BuonAPPetito;
 			sourceTree = "<group>";
@@ -359,9 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134D92922918048F001C2CC8 /* CartView.swift in Sources */,
 				13E4C385290D1DFF00BECA2B /* Pizza.swift in Sources */,
 				134D09E3290F099A00A68700 /* OrderViewModel.swift in Sources */,
 				13E4C350290D1A4100BECA2B /* ContentView.swift in Sources */,
+				134D929029180376001C2CC8 /* DetailView.swift in Sources */,
 				13E4C381290D1DD100BECA2B /* Ingredient.swift in Sources */,
 				130F68A32917CAF100038FAA /* ingredientView.swift in Sources */,
 				134D09DF290EFB6200A68700 /* buttonView.swift in Sources */,

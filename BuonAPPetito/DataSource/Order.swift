@@ -2,27 +2,28 @@ import Foundation
 
 class Order {
     let id: Int
-    var totalAmount: Double = 0.0
     var isOffer: Bool = false
     var diss: Double = 25
-    var pizzas: [Pizza] = Mock.pizzas
+    var pizzas: [Pizza] = []
     let date: Date = Date.now
 
     init(id: Int) {
         self.id = id
     }
 
-    func getAmount() {
-
+    func getAmount() -> Double {
+        var totalAmount = 0.0
         for pizza in pizzas {
             let currentPizzaAmount = Double(pizza.account) * pizza.price
-            self.totalAmount = self.totalAmount + currentPizzaAmount
+            totalAmount += currentPizzaAmount
         }
 
         if (isOffer) {
             let percentageToPay: Double = Double(100 - (self.diss / 100))
-            self.totalAmount = totalAmount * percentageToPay
+            totalAmount = totalAmount * percentageToPay
         }
+
+        return totalAmount
     }
 
     func addPizza(pizza: Pizza) {

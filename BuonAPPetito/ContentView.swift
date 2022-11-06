@@ -6,19 +6,19 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            headerView()
             NavigationStack {
+                headerView(viewModel: viewModel)
                 inputView(text: $searchText).padding()
                 ScrollView {
                     ForEach(searchResults) { pizza in
-                        NavigationLink(destination:  rowView(pizza: pizza, viewModel: viewModel)) {
+                        NavigationLink(destination:  DetailView(viewModel: viewModel)) {
                             rowView(pizza: pizza, viewModel: viewModel)
                                 .padding(.trailing, 20)
                                 .padding(.leading, 20)
                         }
                     }
                 }
-                NavigationLink(destination: customPizzaView(viewModel: viewModel)) {
+               /* NavigationLink(destination: customPizzaView(viewModel: viewModel)) {
                     Text("👩‍🍳 Create your own pizza!")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -26,7 +26,7 @@ struct ContentView: View {
                         .background(Color.orange)
                         .cornerRadius(40)
                         .shadow(radius: 2)
-                }
+                } */
             }
 
 
@@ -35,9 +35,9 @@ struct ContentView: View {
 
     var searchResults: [Pizza] {
           if searchText.isEmpty {
-              return viewModel.order.pizzas
+              return viewModel.pizzas
           } else {
-              return viewModel.order.pizzas.filter { $0.name.contains(searchText) }
+              return viewModel.pizzas.filter { $0.name.contains(searchText) }
           }
       }
 }

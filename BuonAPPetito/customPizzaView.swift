@@ -6,8 +6,7 @@ struct customPizzaView: View {
     
     var body: some View {
         VStack {
-            Text("🥒 Ingredients").font(.system(size: 28))
-            Text("Pizza's name: \(viewModel.customNamePizza)")
+           
             ScrollView {
                 ForEach(viewModel.ingredients) { ing in
                     ingredientView(viewModel: viewModel, ing: ing)

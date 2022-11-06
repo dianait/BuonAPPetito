@@ -6,6 +6,7 @@ class OrderViewModel: ObservableObject {
     var ingredients = Mock.ingredients
     @Published var newPizza: Pizza = Pizza(id: 9, name: "")
     var customNamePizza: String = "Piccard"
+    var pizzas: [Pizza] = Mock.pizzas
 
     func add(pizza: Pizza)  {
         order.addPizza(pizza: pizza)
