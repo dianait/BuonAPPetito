@@ -5,6 +5,7 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
+            headerView(viewModel: viewModel)
             Text("🥒 Ingredients").font(.system(size: 28))
             Text("Pizza's name: \(viewModel.customNamePizza)")
             customPizzaView(viewModel: viewModel)

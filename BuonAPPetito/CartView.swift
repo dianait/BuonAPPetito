@@ -5,20 +5,37 @@ struct CartView: View {
 
     var body: some View {
         VStack {
-            ForEach(viewModel.order.pizzas) { pizza in
-                HStack {
-                    Text(pizza.name)
-                    Text("\(pizza.account) x ")
-                    Text("\(pizza.price, specifier: "%.2f") € = \(pizza.price * Double(pizza.account) , specifier: "%.2f") €").bold() .font(.system(size: 20))
-                    Spacer()
-                }.padding()
-
+            Text("📝 Your order")  .bold() .font(.system(size: 20))
+            ScrollView {
+                ForEach(viewModel.order.pizzas) { pizza in
+                    HStack {
+                        Text(pizza.name)
+                        Text("\(pizza.account) x ")
+                        Text("\(pizza.price, specifier: "%.2f") €")
+                        Spacer()
+                        Text("\(pizza.price * Double(pizza.account) , specifier: "%.2f") €")
+                            .bold() .font(.system(size: 20))
+                    }.padding()
+                    Divider()
+                }
             }
-            Text("💵 TOTAL: \(viewModel.order.getAmount(), specifier: "%.2f") €").bold().font(.system(size: 20))
-        }
-        .onAppear{
 
+            Text("💵 TOTAL: \(viewModel.order.getAmount(), specifier: "%.2f") €")
+                .bold().font(.system(size: 20))
+            Button(action: {
+                print("💳 pay now")
+            }, label: {
+                Text("💳 pay now")
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.orange)
+                    .cornerRadius(40)
+                    .shadow(radius: 2)
+            })
         }
+
+
     }
 }
 

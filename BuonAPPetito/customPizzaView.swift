@@ -13,7 +13,7 @@ struct customPizzaView: View {
                 }
             }
 
-            Button(action: {
+           /* Button(action: {
                 print("pizza ordered")
             }, label: {
                 Text("🍕 Order pizza")
@@ -23,7 +23,7 @@ struct customPizzaView: View {
                     .background(Color.orange)
                     .cornerRadius(40)
                     .shadow(radius: 2)
-            })
+            }) */
         }
 
     }
