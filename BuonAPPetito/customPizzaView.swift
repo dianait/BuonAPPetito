@@ -9,7 +9,6 @@ struct customPizzaView: View {
             Text("🥒 Ingredients").font(.system(size: 28))
             Text("Pizza's name: \(viewModel.customNamePizza)")
             ScrollView {
-                Text("list")
                 ForEach(viewModel.ingredients) { ing in
                     ingredientView(viewModel: viewModel, ing: ing)
                 }

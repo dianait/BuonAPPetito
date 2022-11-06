@@ -18,7 +18,7 @@ struct rowView: View {
 
                 Image(systemName: "plus.circle.fill") .foregroundColor(.green).font(.system(size: 24))
                     .onTapGesture {
-                        _ = viewModel.add(pizza: pizza)
+                        viewModel.add(pizza: pizza)
                         self.counter += 1
 
                     }
@@ -27,7 +27,7 @@ struct rowView: View {
                     .onTapGesture {
                         if (counter > 0) {
                             self.counter -= 1
-                            _ = viewModel.remove(pizza: pizza)
+                            viewModel.remove(pizza: pizza)
                         }
 
 

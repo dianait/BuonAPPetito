@@ -8,11 +8,11 @@ class OrderViewModel: ObservableObject {
     @Published var newPizza: Pizza = Pizza(id: 9, name: "")
     var customNamePizza: String = "Piccard"
 
-    func add(pizza: Pizza) -> Int {
+    func add(pizza: Pizza)  {
         order.addPizza(pizza: pizza)
     }
 
-    func remove(pizza: Pizza) -> Int {
+    func remove(pizza: Pizza)  {
         order.removePizza(pizza: pizza)
     }
 

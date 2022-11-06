@@ -25,50 +25,64 @@ class Order {
         }
     }
 
-    func addPizza(pizza: Pizza) -> Int {
+    func addPizza(pizza: Pizza) {
 
-        if let index = pizzas.firstIndex(of: pizza) {
+        if let index =  getIndex(pizza: pizza) {
             pizzas[index].account += 1
             print("ADD AN UNIT")
             print("🍕 \(pizzas)")
             print("🍕 \(pizzas.count)")
-            return pizzas[index].account
-            
-
         }
-
+        else {
             pizzas.append(pizza)
             print("ADD TO THE LIST")
             print("🍕 \(pizzas)")
             print("🍕 \(pizzas.count)")
-            return 1
-
-
-
+        }
     }
 
-    func removePizza(pizza: Pizza) -> Int{
+    func removePizza(pizza: Pizza) {
 
-        if let index = pizzas.firstIndex(of: pizza) {
+        if let index =  getIndex(pizza: pizza) {
             if (pizzas[index].account < 2) {
                 pizzas.remove(at: index)
                 print("REMOVE FROM THE LIST")
                 print("🍕 \(pizzas)")
                 print("🍕 \(pizzas.count)")
-                return pizzas[index].account
+
             }
             else {
                 pizzas[index].account -= 1
                 print("REMOVE AN UNIT")
                 print("🍕 \(pizzas)")
                 print("🍕 \(pizzas.count)")
-                return pizzas[index].account
             }
         }
         else {
             print("🚨 ERROR: The pizza is not in the user list")
-            return 0
         }
 
+    }
+
+    func addIngredient(ing: Ingredient, pizza: Pizza) {
+        if let index = getIndex(pizza: pizza) {
+            if (!pizza.ingredients.contains(ing)) {
+                pizzas[index].ingredients.append(ing)
+            }
+            else {
+                print("the ingredient is already in the pizza")
+            }
+        }
+        else {
+            print("🚨 ERROR: The pizza is not in the user list")
+        }
+
+    }
+
+    private func getIndex(pizza: Pizza) -> Int? {
+        if let index = pizzas.firstIndex(of: pizza) {
+            return index
+        }
+        return nil
     }
 }
