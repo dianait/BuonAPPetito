@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct customPizzaView: View {
-
     var viewModel: OrderViewModel
-    @State var isAdded: Bool = false
+
     
     var body: some View {
         VStack {
@@ -12,27 +11,7 @@ struct customPizzaView: View {
             ScrollView {
                 Text("list")
                 ForEach(viewModel.ingredients) { ing in
-                    HStack {
-                        Text("\(ing.name)").font(.system(size: 20))
-                        Spacer()
-                        Image(systemName: isAdded ? "minus.circle.fill" : "plus.circle.fill")
-                            .foregroundColor(isAdded ? .red : .green).font(.system(size: 24))
-                    } .padding()
-                        .onTapGesture {
-                            isAdded = !isAdded
-                            viewModel.toggleIngredient(ing: ing)
-                            print("You tapped \(ing.name)")
-                            viewModel.newPizza.ingredients = viewModel.newIngredientes
-                            print(viewModel.newIngredientes.count)
-                        }
-                    Divider()
-                }
-                Text("added")
-                ForEach(viewModel.newPizza.ingredients) { ing in
-                    HStack {
-                        Text("\(ing.name)").font(.system(size: 20))
-                        
-                    }
+                    ingredientView(viewModel: viewModel, ing: ing)
                 }
             }
 

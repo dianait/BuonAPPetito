@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		130F689F2917B81900038FAA /* testContentView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 130F689E2917B81900038FAA /* testContentView.1.png */; };
+		130F68A32917CAF100038FAA /* ingredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130F68A22917CAF100038FAA /* ingredientView.swift */; };
 		1314848429164F7300974A02 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 1314848329164F7300974A02 /* SnapshotTesting */; };
 		131484882916536400974A02 /* testHaderView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 131484872916536400974A02 /* testHaderView.1.png */; };
 		1314848F2916587B00974A02 /* testHaderView.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1314848A2916587B00974A02 /* testHaderView.1.png */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		130F689E2917B81900038FAA /* testContentView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testContentView.1.png; sourceTree = "<group>"; };
+		130F68A22917CAF100038FAA /* ingredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ingredientView.swift; sourceTree = "<group>"; };
 		131484872916536400974A02 /* testHaderView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testHaderView.1.png; sourceTree = "<group>"; };
 		1314848A2916587B00974A02 /* testHaderView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testHaderView.1.png; sourceTree = "<group>"; };
 		1314848C2916587B00974A02 /* testButtonView.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testButtonView.1.png; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				134D09E0290EFFC900A68700 /* inputView.swift */,
 				134D09E2290F099A00A68700 /* OrderViewModel.swift */,
 				13148494291662A000974A02 /* customPizzaView.swift */,
+				130F68A22917CAF100038FAA /* ingredientView.swift */,
 			);
 			path = BuonAPPetito;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				134D09E3290F099A00A68700 /* OrderViewModel.swift in Sources */,
 				13E4C350290D1A4100BECA2B /* ContentView.swift in Sources */,
 				13E4C381290D1DD100BECA2B /* Ingredient.swift in Sources */,
+				130F68A32917CAF100038FAA /* ingredientView.swift in Sources */,
 				134D09DF290EFB6200A68700 /* buttonView.swift in Sources */,
 				134D09DD290EF78B00A68700 /* rowView.swift in Sources */,
 				134D09E1290EFFC900A68700 /* inputView.swift in Sources */,
