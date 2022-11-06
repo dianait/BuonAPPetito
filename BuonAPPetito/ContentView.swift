@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var viewModel: OrderViewModel = OrderViewModel()
+    @StateObject var viewModel: OrderViewModel = OrderViewModel()
     @State private var searchText = ""
 
     var body: some View {

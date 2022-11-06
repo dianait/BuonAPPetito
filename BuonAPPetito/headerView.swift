@@ -14,7 +14,7 @@ struct headerView: View {
                 }
 
             }.padding()
-            Image(systemName:"\(viewModel.order.pizzas.count).circle.fill").font(.system(size: 24))
+            Image(systemName:"\(viewModel.order.getTotalNumOfPizzas()).circle.fill").font(.system(size: 24))
                 .background(.white)
                 .foregroundColor(.red)
                 .padding(.leading, 310)

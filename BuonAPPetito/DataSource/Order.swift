@@ -104,4 +104,13 @@ class Order {
             pizzas[index].ingredients = []
         }
     }
+
+    func getTotalNumOfPizzas() -> Int {
+        var total = 0
+        for pizza in pizzas {
+            let currentPizza = pizza.account * 1
+            total += currentPizza
+        }
+        return total
+    }
 }
