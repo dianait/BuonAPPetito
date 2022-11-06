@@ -3,7 +3,7 @@ import SwiftUI
 struct rowView: View {
     var pizza: Pizza
     @State var counter: Int = 0
-    var viewModel: OrderViewModel
+    @EnvironmentObject  var viewModel: OrderViewModel
 
     var body: some View {
         VStack {
@@ -40,6 +40,8 @@ struct rowView: View {
 
 struct rowView_Previews: PreviewProvider {
     static var previews: some View {
-        rowView(pizza: Mock.pizzas[0], viewModel: OrderViewModel()).padding()
+        rowView(pizza: Mock.pizzas[0])
+            .padding()
+            .environmentObject(OrderViewModel())
     }
 }

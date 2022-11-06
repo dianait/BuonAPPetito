@@ -11,6 +11,7 @@ final class SnapshotTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         pizza = BuonAPPetito.Mock.pizzas[2]
+
     }
 
     override func tearDownWithError() throws {
@@ -19,12 +20,12 @@ final class SnapshotTests: XCTestCase {
     }
 
     func testHaderView() {
-        let view: UIView = headerView().toView()
+        let view: UIView = headerView().environmentObject(OrderViewModel()).toView()
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
     }
 
     func testRowView() {
-        let view = rowView(pizza: pizza, viewModel: OrderViewModel()).toView()
+        let view = rowView(pizza: pizza).toView()
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
     }
 
@@ -39,7 +40,7 @@ final class SnapshotTests: XCTestCase {
     }
 
     func testContentView() {
-        let view = ContentView().toVC()
+        let view = ContentView().environmentObject(OrderViewModel()).toVC()
         assertSnapshot(matching: view, as: .image(on: .iPhone12))
     }
 }

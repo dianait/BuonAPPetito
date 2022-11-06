@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct headerView: View {
-    var viewModel: OrderViewModel
+    @EnvironmentObject  var viewModel: OrderViewModel
 
     var body: some View {
         ZStack {
             HStack {
                 Text("🍕 BuonAPPetito").bold().font(.system(size: 18))
                 Spacer()
-                NavigationLink(destination:  CartView(viewModel: viewModel)) {
+                NavigationLink(destination:  CartView()) {
                     Image(systemName: "cart").font(.system(size: 24))
                         .foregroundColor(.black)
                 }
@@ -26,6 +26,6 @@ struct headerView: View {
 
 struct headerView_Previews: PreviewProvider {
     static var previews: some View {
-        headerView(viewModel: OrderViewModel())
+        headerView().environmentObject(OrderViewModel())
     }
 }

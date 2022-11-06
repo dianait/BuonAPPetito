@@ -24,7 +24,7 @@ final class BuonAPPetitoTests: XCTestCase {
         XCTAssertEqual(order.pizzas.last?.name, "Etna")
         XCTAssertEqual(order.pizzas.first?.name, "Margarita")
         XCTAssertEqual(order.isOffer, false)
-        XCTAssertEqual(order.totalAmount, 0.0)
+        XCTAssertEqual(order.getAmount(), 49.5)
         XCTAssertEqual(order.diss, 25)
     }
 
@@ -60,15 +60,13 @@ final class BuonAPPetitoTests: XCTestCase {
     }
 
     func testgetAmount() {
-        order.getAmount()
-        XCTAssertEqual(order.totalAmount, 9.90 * 5.0)
+        XCTAssertEqual(order.getAmount(), 9.90 * 5.0)
     }
 
     func testgetAmountWithNewPizza() {
         order.addPizza(pizza: pizza)
         order.addPizza(pizza: pizza)
-        order.getAmount()
-        XCTAssertEqual(order.totalAmount, 9.90 * 7.0)
+        XCTAssertEqual(order.getAmount(), 9.90 * 7.0)
     }
 
 }

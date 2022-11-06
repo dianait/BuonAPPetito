@@ -1,21 +1,22 @@
 import SwiftUI
 
 struct DetailView: View {
-    var viewModel: OrderViewModel
+    @EnvironmentObject  var viewModel: OrderViewModel
+    var pizza: Pizza
     
     var body: some View {
         VStack {
-            headerView(viewModel: viewModel)
-            Text("🥒 Ingredients").font(.system(size: 28))
-            Text("Pizza's name: \(viewModel.customNamePizza)")
-            customPizzaView(viewModel: viewModel)
-        }
 
+            Text("Pizza's name: \(pizza.name)")
+            Text("🥒 Ingredients").font(.system(size: 20))
+            customPizzaView()
+        }
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(viewModel: OrderViewModel())
+        DetailView(pizza: Mock.pizzas[3])
+            .environmentObject(OrderViewModel())
     }
 }

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct customPizzaView: View {
-    var viewModel: OrderViewModel
+    @EnvironmentObject  var viewModel: OrderViewModel
 
     
     var body: some View {
@@ -31,6 +31,7 @@ struct customPizzaView: View {
 
 struct customPizzaView_Previews: PreviewProvider {
     static var previews: some View {
-        customPizzaView(viewModel: OrderViewModel())
+        customPizzaView()
+            .environmentObject(OrderViewModel())
     }
 }

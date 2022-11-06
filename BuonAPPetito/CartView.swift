@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CartView: View {
-    var viewModel: OrderViewModel
+    @EnvironmentObject  var viewModel: OrderViewModel
 
     var body: some View {
         VStack {
@@ -25,7 +25,7 @@ struct CartView: View {
             Button(action: {
                 print("💳 pay now")
             }, label: {
-                Text("💳 pay now")
+                Text("💳 Checkout")
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding()
@@ -41,6 +41,7 @@ struct CartView: View {
 
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        CartView(viewModel: OrderViewModel())
+        CartView()
+            .environmentObject(OrderViewModel())
     }
 }
