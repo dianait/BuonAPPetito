@@ -8,27 +8,27 @@ The aim of this Challenge is to create an amazing app that allows your business 
 Why is this app better than some actual ones? Clients do not need to register, they can order 4-halve pizzas (or even more!), they can remove some toppings and... a final trick to avoid paying 🫣
 
 ## 🛠 How does it work?
-[ ] When the user opens the app, the main list of pizzas shows up to allow them to pick one and start the order
+✅ When the user opens the app, the main list of pizzas shows up to allow them to pick one and start the order
 
 [ ] Each pizza can contain up to 5 toppings and a fixed price
 
-[ ] The user could add as many pizzas as they want to the shopping cart
+✅ The user could add as many pizzas as they want to the shopping cart
 
-[ ] Through the main list, the user will see the detail page of the pizza to see their main ingredients, picture, or description
+✅ Through the main list, the user will see the detail page of the pizza to see their main ingredients, picture, or description
 
 [ ] A pizza could be composed of 4 independent types! 🤯 So the user could do their own creation
 
 ## 🏡 Main screen
-Shows all the available pizzas, with its name, picture, and price
+✅ Shows all the available pizzas, with its name, picture, and price
 
-Users can add any of them to the shopping cart
+✅ Users can add any of them to the shopping cart
 
-Users can access the detail page just by clicking on any item
+✅ Users can access the detail page just by clicking on any item
 
-Users can go to their shopping cart to see which pizzas they have added
+✅ Users can go to their shopping cart to see which pizzas they have added
 
 ## 🔍 Detail screen
-[ ] The app will show the picture, name, description price, and ingredients of the pizza
+✅ The app will show the picture, name, description price, and ingredients of the pizza
 
 [ ] The user would be able to add it to their shopping cart
 
