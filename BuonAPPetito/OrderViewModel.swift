@@ -4,7 +4,6 @@ class OrderViewModel: ObservableObject {
 
     let order: Order = Mock.order
     var ingredients = Mock.ingredients
-    var newIngredientes: [Ingredient] = []
     @Published var newPizza: Pizza = Pizza(id: 9, name: "")
     var customNamePizza: String = "Piccard"
 
@@ -19,16 +18,24 @@ class OrderViewModel: ObservableObject {
     func toggleIngredient(ing: Ingredient) {
         var ing2 = ing
         ing2.isAdded = !ing2.isAdded
-        if (newIngredientes.count == 0) {
+        if (newPizza.ingredients.count == 0) {
             newPizza.name = customNamePizza
-            newIngredientes.append(ing2)
+            newPizza.ingredients.append(ing2)
         }
         else {
-            newIngredientes.removeLast()
-        }
+            if let index = order.getIndexIngredient(pizza: newPizza, ing: ing2) {
+                newPizza.ingredients.remove(at: index)
+            }
+            else {
+                print("🚨 ERROR: The ingredient is not in the pizza")
 
-        newPizza.ingredients = newIngredientes
+            }
+
+        }
+    }
+
+    func resetIngredients() {
+        newPizza.ingredients = []
+    }
 
 }
-
-    }

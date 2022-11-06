@@ -6,6 +6,7 @@ struct ingredientView: View {
     var ing: Ingredient
 
     var body: some View {
+        VStack {
         HStack {
             Text("\(ing.name)").font(.system(size: 20))
             Spacer()
@@ -16,10 +17,12 @@ struct ingredientView: View {
                 isAdded = !isAdded
                 viewModel.toggleIngredient(ing: ing)
                 print("You tapped \(ing.name)")
-                viewModel.newPizza.ingredients = viewModel.newIngredientes
-                print(viewModel.newIngredientes.count)
+                print(viewModel.newPizza.ingredients.count)
+
             }
         Divider()
+    }
+
     }
 }
 
