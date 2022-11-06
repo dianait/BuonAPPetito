@@ -27,35 +27,23 @@ class Order {
 
     func addPizza(pizza: Pizza) {
 
-        if let index =  getIndex(pizza: pizza) {
+        if let index =  getIndexPizza(pizza: pizza) {
             pizzas[index].account += 1
-            print("ADD AN UNIT")
-            print("🍕 \(pizzas)")
-            print("🍕 \(pizzas.count)")
         }
         else {
             pizzas.append(pizza)
-            print("ADD TO THE LIST")
-            print("🍕 \(pizzas)")
-            print("🍕 \(pizzas.count)")
         }
     }
 
     func removePizza(pizza: Pizza) {
 
-        if let index =  getIndex(pizza: pizza) {
+        if let index =  getIndexPizza(pizza: pizza) {
             if (pizzas[index].account < 2) {
                 pizzas.remove(at: index)
-                print("REMOVE FROM THE LIST")
-                print("🍕 \(pizzas)")
-                print("🍕 \(pizzas.count)")
 
             }
             else {
                 pizzas[index].account -= 1
-                print("REMOVE AN UNIT")
-                print("🍕 \(pizzas)")
-                print("🍕 \(pizzas.count)")
             }
         }
         else {
@@ -65,8 +53,8 @@ class Order {
     }
 
     func addIngredient(ing: Ingredient, pizza: Pizza) {
-        if let index = getIndex(pizza: pizza) {
-            if (!pizza.ingredients.contains(ing)) {
+        if let index = getIndexPizza(pizza: pizza) {
+            if (!pizzas[index].ingredients.contains(ing)) {
                 pizzas[index].ingredients.append(ing)
             }
             else {
@@ -79,10 +67,40 @@ class Order {
 
     }
 
-    private func getIndex(pizza: Pizza) -> Int? {
+    func removeIngredient(ing: Ingredient, pizza: Pizza) {
+        if let index = getIndexPizza(pizza: pizza) {
+            if (pizzas[index].ingredients.contains(ing)) {
+                if let indexIng = getIndexIngredient(pizza: pizzas[index], ing: ing) {
+                    pizzas[index].ingredients.remove(at: indexIng)
+                }
+            }
+            else {
+                print("🚨 ERROR: The ingredient is not in the pizza")
+            }
+        }
+        else {
+            print("🚨 ERROR: The pizza is not in the user list")
+        }
+
+    }
+
+    private func getIndexPizza(pizza: Pizza) -> Int? {
         if let index = pizzas.firstIndex(of: pizza) {
             return index
         }
         return nil
+    }
+
+    private func getIndexIngredient(pizza: Pizza, ing: Ingredient) -> Int? {
+        if let index = pizza.ingredients.firstIndex(of: ing) {
+            return index
+        }
+        return nil
+    }
+
+    func resetCustomPizza(pizza: Pizza) {
+        if let index = getIndexPizza(pizza: pizza) {
+            pizzas[index].ingredients = []
+        }
     }
 }
