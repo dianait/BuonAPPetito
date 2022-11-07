@@ -3,9 +3,12 @@ name: tests
 on: [push]
 
 jobs:
-  run_tests:
+  unit_tests:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Run tests
-      run: xcodebuild test -scheme BuonAPPetito -project BuonAPPetito.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.0'
+    - name: Repository checkout
+      uses: actions/checkout@v2
+    - name: Build for iOS
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme BuonAPPetito -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" 
+    - name: Run iOS tests
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme BuonAPPetito -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" 
