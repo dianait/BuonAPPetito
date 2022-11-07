@@ -1,15 +1,13 @@
-name: Swift
+name: tests
 
 on: [push]
 
 jobs:
-  build:
-
-    runs-on: macos-latest
-
+  run_tests:
+    runs-on: macos-11
     steps:
-      - uses: actions/checkout@v3
-      - name: Build
-        run: swift build
-      - name: Run tests
-        run: swift test
+    - uses: actions/checkout@v1
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
+    - name: Run tests
+      run: xcodebuild test -scheme BuonAPPetito -project BuonAPPetito.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.0'
