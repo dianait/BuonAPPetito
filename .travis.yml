@@ -1,6 +1,0 @@
-language: objective-c
-xcode_project: BuonAPPetito.xcodeproj 
-xcode_scheme: BuonAPPetito
-osx_image: xcode14
-xcode_destination: platform=iOS Simulator,OS=14.5,name=iPhone 12 mini
-script: xcodebuild clean build test -project
