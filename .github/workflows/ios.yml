@@ -8,6 +8,10 @@ jobs:
     steps:
     - name: Repository checkout
       uses: actions/checkout@v2
+    - name: Install swift snapshot testing
+      uses: pointfreeco/swift-snapshot-testing@1.10.0
+      with:
+       package: https://github.com/pointfreeco/swift-snapshot-testing.git
     - name: Build for iOS
       run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme BuonAPPetito -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" 
     - name: Run iOS tests
