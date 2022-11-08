@@ -9,11 +9,11 @@ struct Pizza: Equatable, Identifiable, Hashable {
     var name: String
     let price: Double = 9.90
     var ingredients: [Ingredient] = [
-        Ingredient(id: 1, name: "🧅 Onion", isAdded: true),
-            Ingredient(id: 2, name: "🍅 Tomato", isAdded: true),
-            Ingredient(id: 3, name: "🧀 Cheese", isAdded: true),
-            Ingredient(id: 4, name: "🥓 Bacon", isAdded: true),
-            Ingredient(id: 5, name: "🍍 Pinneaple"),]
+        Ingredient(id: 1, name: "🧅 Onion", emoji: "🧅", isAdded: true),
+        Ingredient(id: 2, name: "🍅 Tomato", emoji: "🍅", isAdded: true),
+        Ingredient(id: 3, name: "🧀 Cheese", emoji: "🧀",  isAdded: true),
+        Ingredient(id: 4, name: "🥓 Bacon", emoji: "🥓", isAdded: true),
+        Ingredient(id: 5, name: "🍍 Pinneaple", emoji: "🍍")]
     var account: Int = 1
 }
 

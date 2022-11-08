@@ -14,6 +14,7 @@ struct DetailView: View {
                     ingredientView(viewModel: viewModel, ing: ing, pizza: pizza)
                 }
                 Button(action: {
+                    viewModel.newPizza.name = pizza.name
                     _ = viewModel.add(pizza: viewModel.newPizza)
                     print(viewModel.newPizza.ingredients.filter({$0.isAdded}))
                     viewModel.getTotalPizzas()

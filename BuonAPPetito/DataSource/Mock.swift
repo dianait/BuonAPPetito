@@ -3,12 +3,12 @@ import Foundation
 struct Mock {
 
     static var ingredients: [Ingredient] = [
-        Ingredient(id: 1, name: "🧅 Onion"),
-        Ingredient(id: 2, name: "🍅 Tomato"),
-        Ingredient(id: 3, name: "🧀 Cheese"),
-        Ingredient(id: 4, name: "🥓 Bacon"),
-        Ingredient(id: 5, name: "🍍 Pinneaple"),
-        Ingredient(id: 6, name: "🌶 Chili")
+        Ingredient(id: 1, name: "🧅 Onion", emoji: "🧅"),
+        Ingredient(id: 2, name: "🍅 Tomato", emoji: "🍅"),
+        Ingredient(id: 3, name: "🧀 Cheese", emoji: "🧀"),
+        Ingredient(id: 4, name: "🥓 Bacon", emoji: "🥓"),
+        Ingredient(id: 5, name: "🍍 Pinneaple", emoji: "🍍"),
+        Ingredient(id: 6, name: "🌶 Chili", emoji: "🌶")
     ]
 
     static var pizzas: [Pizza] = [
