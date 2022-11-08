@@ -24,11 +24,14 @@ class OrderViewModel: ObservableObject {
         order.removePizza(pizza: pizza)
     }
 
-    func toggleIngredient(pizza: Pizza, ing: Ingredient, isAdded: Bool) {
-
-        if let index = newPizza.ingredients.firstIndex(of: ing) {
-            newPizza.ingredients[index].isAdded =  !newPizza.ingredients[index].isAdded
-            print(newPizza.ingredients.filter({$0.isAdded}).count)
+    func toggleIngredient(ing: Ingredient, isAdded: Bool) {
+        if let index = getIndexIngredient(ing: ing) {
+            newPizza.ingredients[index].isAdded = !newPizza.ingredients[index].isAdded
+        }
+        else {
+            var ing2: Ingredient = ing
+            ing2.isAdded = isAdded
+            newPizza.ingredients.append(ing2)
         }
     }
 
@@ -38,6 +41,12 @@ class OrderViewModel: ObservableObject {
 
     func getTotalPizzas() {
         total = order.getTotalNumOfPizzas()
+    }
 
+    func getIndexIngredient(ing: Ingredient) -> Int? {
+        if let index = newPizza.ingredients.firstIndex(of: ing) {
+            return index
+        }
+        return nil
     }
 }

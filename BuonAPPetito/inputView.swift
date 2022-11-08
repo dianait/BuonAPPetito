@@ -2,9 +2,10 @@ import SwiftUI
 
 struct inputView: View {
     @Binding var text: String
+    var placeholder: String
 
     var body: some View {
-        TextField( " Search for your pizza... ",
+        TextField(placeholder,
                    text: $text)
 
         .modifier(TextFieldClearButton(text: $text))

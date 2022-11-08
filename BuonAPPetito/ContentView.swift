@@ -8,7 +8,7 @@ struct ContentView: View {
         VStack {
             NavigationStack {
                 headerView()
-                inputView(text: $searchText).padding()
+                inputView(text: $searchText, placeholder: " Search for your pizza... ").padding()
                 ScrollView {
                     ForEach(searchResults) { pizza in
                         NavigationLink(destination:  DetailView(pizza: pizza)) {
