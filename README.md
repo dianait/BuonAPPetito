@@ -30,7 +30,7 @@ Why is this app better than some actual ones? Clients do not need to register, t
 ## 🔍 Detail screen
 ✅ The app will show the picture, name, description price, and ingredients of the pizza
 
-[ ] The user would be able to add it to their shopping cart
+✅ The user would be able to add it to their shopping cart
 
 [ ] Through this screen, the user will be able to remove up to 2 toppings
 
