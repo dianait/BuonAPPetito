@@ -10,7 +10,7 @@ Why is this app better than some actual ones? Clients do not need to register, t
 ## 🛠 How does it work?
 ✅ When the user opens the app, the main list of pizzas shows up to allow them to pick one and start the order
 
-[ ] Each pizza can contain up to 5 toppings and a fixed price
+✅ Each pizza can contain up to 5 toppings and a fixed price
 
 ✅ The user could add as many pizzas as they want to the shopping cart
 
