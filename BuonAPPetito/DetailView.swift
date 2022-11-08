@@ -6,11 +6,24 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
-
-            Text("🍕\(pizza.name)")
-            Text("💵 \(pizza.price, specifier: "%.2f") €").bold() .font(.system(size: 20))
+            headerView()
+            rowView(pizza: pizza)
             Text("🥒 Ingredients").font(.system(size: 20))
             customPizzaView(pizza: pizza)
+            Button(action: {
+                viewModel.add(pizza: pizza)
+                viewModel.getTotalPizzas()
+                print("🛒 Add to cart")
+            }, label: {
+                Text("🛒 Add to cart")
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.orange)
+                    .cornerRadius(40)
+                    .shadow(radius: 2)
+            })
+            
         }
     }
 }

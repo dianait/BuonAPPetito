@@ -12,7 +12,8 @@ struct Pizza: Equatable, Identifiable, Hashable {
         Ingredient(id: 1, name: "🧅 Onion", isAdded: true),
             Ingredient(id: 2, name: "🍅 Tomato", isAdded: true),
             Ingredient(id: 3, name: "🧀 Cheese", isAdded: true),
-            Ingredient(id: 4, name: "🥓 Bacon", isAdded: true)]
+            Ingredient(id: 4, name: "🥓 Bacon", isAdded: true),
+            Ingredient(id: 5, name: "🍍 Pinneaple"),]
     var account: Int = 1
 }
 
