@@ -9,7 +9,7 @@ struct customPizzaView: View {
         VStack {
             ScrollView {
                 ForEach(pizza.ingredients) { ing in
-                    ingredientView(viewModel: viewModel, ing: ing)
+                    ingredientView(viewModel: viewModel, ing: ing, pizza: pizza)
                 }
             }
         }

@@ -4,6 +4,7 @@ struct ingredientView: View {
     @State var isAdded: Bool = true
     var viewModel: OrderViewModel
     var ing: Ingredient
+    @State var pizza: Pizza
 
     var body: some View {
         VStack {
@@ -15,15 +16,19 @@ struct ingredientView: View {
         } .padding()
             .onTapGesture {
                 isAdded = !isAdded
-                viewModel.toggleIngredient(ing: ing)
+                viewModel.toggleIngredient(pizza: pizza, ing: ing, isAdded: isAdded)
             }
         Divider()
+        }
+        .onAppear {
+            // viewModel.order.pizzas.append(pizza)
+            isAdded = ing.isAdded
         }
     }
 }
 
 struct ingredientView_Previews: PreviewProvider {
     static var previews: some View {
-        ingredientView(viewModel: OrderViewModel(), ing: Mock.ingredients[0])
+        ingredientView(viewModel: OrderViewModel(), ing: Mock.ingredients[0], pizza: Mock.pizzas[0])
     }
 }

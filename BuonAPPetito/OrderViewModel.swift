@@ -9,30 +9,26 @@ class OrderViewModel: ObservableObject {
     var pizzas: [Pizza] = Mock.pizzas
     @Published var total: Int = 0
 
-    func add(pizza: Pizza)  {
+    func add(pizza: Pizza) -> Int?  {
         order.addPizza(pizza: pizza)
+
+        if let index = order.pizzas.firstIndex(of: pizza) {
+            return index
+        }
+        else {
+            return nil
+        }
     }
 
     func remove(pizza: Pizza)  {
         order.removePizza(pizza: pizza)
     }
 
-    func toggleIngredient(ing: Ingredient) {
-        var ing2 = ing
-        ing2.isAdded = !ing2.isAdded
-        if (newPizza.ingredients.count == 0) {
-            newPizza.name = customNamePizza
-            newPizza.ingredients.append(ing2)
-        }
-        else {
-            if let index = order.getIndexIngredient(pizza: newPizza, ing: ing2) {
-                newPizza.ingredients.remove(at: index)
-            }
-            else {
-                print("🚨 ERROR: The ingredient is not in the pizza")
+    func toggleIngredient(pizza: Pizza, ing: Ingredient, isAdded: Bool) {
 
-            }
-
+        if let index = newPizza.ingredients.firstIndex(of: ing) {
+            newPizza.ingredients[index].isAdded =  !newPizza.ingredients[index].isAdded
+            print(newPizza.ingredients.filter({$0.isAdded}).count)
         }
     }
 

@@ -85,7 +85,7 @@ class Order {
 
     }
 
-    private func getIndexPizza(pizza: Pizza) -> Int? {
+    func getIndexPizza(pizza: Pizza) -> Int? {
         if let index = pizzas.firstIndex(of: pizza) {
             return index
         }

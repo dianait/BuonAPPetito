@@ -9,21 +9,26 @@ struct DetailView: View {
             headerView()
             rowView(pizza: pizza)
             Text("🥒 Ingredients").font(.system(size: 20))
-            customPizzaView(pizza: pizza)
-            Button(action: {
-                viewModel.add(pizza: pizza)
-                viewModel.getTotalPizzas()
-                print("🛒 Add to cart")
-            }, label: {
-                Text("🛒 Add to cart")
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.orange)
-                    .cornerRadius(40)
-                    .shadow(radius: 2)
-            })
-            
+            ScrollView {
+                ForEach(pizza.ingredients) { ing in
+                    ingredientView(viewModel: viewModel, ing: ing, pizza: pizza)
+                }
+                Button(action: {
+                    _ = viewModel.add(pizza: viewModel.newPizza)
+                    print(viewModel.newPizza.ingredients.filter({$0.isAdded}))
+                    viewModel.getTotalPizzas()
+                    print("🛒 Add to cart")
+                }, label: {
+                    Text("🛒 Add to cart")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.orange)
+                        .cornerRadius(40)
+                        .shadow(radius: 2)
+                })
+                
+            }
         }
     }
 }
