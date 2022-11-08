@@ -17,17 +17,23 @@ struct rowView: View {
                 Spacer()
 
                 Image(systemName: "plus.circle.fill") .foregroundColor(.green).font(.system(size: 24))
+                    .accessibilityIdentifier("add \(pizza.name) pizza")
                     .onTapGesture {
                         viewModel.add(pizza: pizza)
                         self.counter += 1
+                        viewModel.getTotalPizzas()
 
                     }
                 Text("\(counter)")
-                Image(systemName:"minus.circle.fill" ) .foregroundColor(counter < 1 ? .gray : .red).font(.system(size: 24))
+                    .accessibilityIdentifier("\(pizza.name) count")
+                Image(systemName:"minus.circle.fill" )
+                    .foregroundColor(counter < 1 ? .gray : .red).font(.system(size: 24))
+                    .accessibilityIdentifier("remove \(pizza.name) pizza")
                     .onTapGesture {
                         if (counter > 0) {
                             self.counter -= 1
                             viewModel.remove(pizza: pizza)
+                            viewModel.getTotalPizzas()
                         }
 
 

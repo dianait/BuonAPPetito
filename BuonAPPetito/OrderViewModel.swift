@@ -7,6 +7,7 @@ class OrderViewModel: ObservableObject {
     @Published var newPizza: Pizza = Pizza(id: 9, name: "")
     var customNamePizza: String = "Piccard"
     var pizzas: [Pizza] = Mock.pizzas
+    @Published var total: Int = 0
 
     func add(pizza: Pizza)  {
         order.addPizza(pizza: pizza)
@@ -39,4 +40,8 @@ class OrderViewModel: ObservableObject {
         newPizza.ingredients = []
     }
 
+    func getTotalPizzas() {
+        total = order.getTotalNumOfPizzas()
+
+    }
 }

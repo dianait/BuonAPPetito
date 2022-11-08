@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct headerView: View {
-    @EnvironmentObject  var viewModel: OrderViewModel
+    @EnvironmentObject var viewModel: OrderViewModel
 
     var body: some View {
         ZStack {
